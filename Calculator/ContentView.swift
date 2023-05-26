@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    var currentValue: String = "0"
+    // @State bring var into global space and will modify the value throught the app
+    @State var currentValue: String = "0";
     var body: some View {
 //        VStack { //organizes items vertically
 //            Image(systemName: "globe")
@@ -27,7 +28,7 @@ struct ContentView: View {
             Color.black
             VStack {
                 TotalText(value: currentValue)
-                ButtonGrid()
+                ButtonGrid(currentValue: $currentValue)
             }
             .padding()
             
