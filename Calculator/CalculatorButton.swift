@@ -12,6 +12,7 @@ struct CalculatorButton: View {
     var backgroundColor = Color(hue: 1.0, saturation: 0.0, brightness: 0.283)
     var buttonVal: String = "1";
     var action: (CalculatorButton) -> Void = {_ in};
+    var operation: CalculatorOperations = .notSet;
     var body: some View {
         Button {
             // method body when button is pressed
